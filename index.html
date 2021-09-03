@@ -1,0 +1,33 @@
+<!doctype html>
+
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <title>A random user generator</title>
+
+            <link rel="stylesheet" href="vue.css">
+        </head>
+
+        <body>
+            <div id="app">
+                <img
+                    v-bind:src="picture"
+                    :alt="`${firstName} ${lastName}`"
+                    :class="gender"
+                />
+                <h1>{{firstName}} {{lastName}}</h1>
+                <h3>Email: {{email}}</h3>
+                <button V-on:click="getUser()" 
+                    :class="gender" >Get Random User</button>
+            </div>
+            
+            <script src="https://unpkg.com/vue@next"></script>
+            <script src="app.js"></script>
+            
+
+        </body>
+</html>
+
+
